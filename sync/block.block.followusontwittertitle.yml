@@ -1,0 +1,25 @@
+uuid: 833d8e47-d3a5-40a2-951c-e8cce845562d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dac1617c-27f6-4c7b-a450-7e32b7ebda0a'
+  module:
+    - block_content
+  theme:
+    - legacy
+id: followusontwittertitle
+theme: legacy
+region: twitter_group
+weight: -12
+provider: null
+plugin: 'block_content:dac1617c-27f6-4c7b-a450-7e32b7ebda0a'
+settings:
+  id: 'block_content:dac1617c-27f6-4c7b-a450-7e32b7ebda0a'
+  label: 'Follow us on Twitter title'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

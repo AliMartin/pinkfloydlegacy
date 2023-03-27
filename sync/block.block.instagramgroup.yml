@@ -1,0 +1,28 @@
+uuid: 59520ac6-d541-4a52-b210-0ba9074258a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.instagram_group
+  module:
+    - blockgroup
+    - system
+  theme:
+    - legacy
+id: instagramgroup
+theme: legacy
+region: content
+weight: -9
+provider: null
+plugin: 'block_group:instagram_group'
+settings:
+  id: 'block_group:instagram_group'
+  label: 'Instagram group'
+  label_display: '0'
+  provider: blockgroup
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

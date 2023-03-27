@@ -1,0 +1,6 @@
+uuid: e3136e3d-ca9b-4e85-a4d5-85ce7ee10121
+langcode: en
+status: true
+dependencies: {  }
+id: facebook_group
+label: 'Facebook group'

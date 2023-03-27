@@ -1,0 +1,98 @@
+uuid: 74f31924-4d9b-46dc-a3fa-f842a814d985
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.webform.body
+    - field.field.node.webform.field_image
+    - field.field.node.webform.webform
+    - node.type.webform
+  module:
+    - ds
+    - text
+    - user
+    - webform
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      top:
+        - field_image
+        - node_title
+      main:
+        - body
+        - webform
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          wrapper: h1
+          class: ''
+_core:
+  default_config_hash: 3r1i0UMUbeNHhvmiqHDYznoS4G9XR1jq6lQ49r80lDE
+id: node.webform.default
+targetEntityType: node
+bundle: webform
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: main
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: top
+  webform:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 3
+    region: main
+hidden:
+  links: true

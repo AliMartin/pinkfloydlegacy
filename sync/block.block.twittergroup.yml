@@ -1,0 +1,28 @@
+uuid: df863c1b-ac85-434f-85e9-14ebe0fcf047
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.twitter_group
+  module:
+    - blockgroup
+    - system
+  theme:
+    - legacy
+id: twittergroup
+theme: legacy
+region: content
+weight: -7
+provider: null
+plugin: 'block_group:twitter_group'
+settings:
+  id: 'block_group:twitter_group'
+  label: 'Twitter group'
+  label_display: '0'
+  provider: blockgroup
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

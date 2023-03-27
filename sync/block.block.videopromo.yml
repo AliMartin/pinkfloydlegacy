@@ -1,0 +1,34 @@
+uuid: 429ea8a4-dc8e-4bcb-8422-9a1974ea58ef
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:youtube:bba0975f-4dfe-46b4-a527-608970e5d9f3'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - legacy
+third_party_settings:
+  block_class:
+    classes: promo-video-block
+id: videopromo
+theme: legacy
+region: content_top
+weight: -14
+provider: null
+plugin: 'block_content:bba0975f-4dfe-46b4-a527-608970e5d9f3'
+settings:
+  id: 'block_content:bba0975f-4dfe-46b4-a527-608970e5d9f3'
+  label: 'Video promo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

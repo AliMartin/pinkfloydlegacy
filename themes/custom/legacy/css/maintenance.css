@@ -1,0 +1,35 @@
+.maintenance-page {
+  background-image: url('/themes/custom/legacy/images/wallpaper-01.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.maintenance-page header#navbar {
+  display: none;
+}
+
+.maintenance-page h1 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.maintenance-page .follow-social-block {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.5;)
+}
+
+.maintenance-page .follow-social-block h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.maintenance-page .follow-social-block img {
+  max-width: 100%;
+  width: 260px;
+}

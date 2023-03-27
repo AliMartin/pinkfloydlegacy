@@ -1,0 +1,25 @@
+uuid: 7839fc83-597b-4b5a-80b5-1424654d4588
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7e5828eb-2baf-40be-bf79-2b72a316309d'
+  module:
+    - block_content
+  theme:
+    - legacy
+id: facebookwidget
+theme: legacy
+region: facebook_group
+weight: -12
+provider: null
+plugin: 'block_content:7e5828eb-2baf-40be-bf79-2b72a316309d'
+settings:
+  id: 'block_content:7e5828eb-2baf-40be-bf79-2b72a316309d'
+  label: 'Facebook widget'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

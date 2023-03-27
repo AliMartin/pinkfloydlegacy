@@ -1,0 +1,28 @@
+uuid: 96c699dc-d6a6-4932-b73d-f31ba510ba35
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.shows_group
+  module:
+    - blockgroup
+    - system
+  theme:
+    - legacy
+id: showsgroup
+theme: legacy
+region: content
+weight: -8
+provider: null
+plugin: 'block_group:shows_group'
+settings:
+  id: 'block_group:shows_group'
+  label: 'Shows group'
+  label_display: '0'
+  provider: blockgroup
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

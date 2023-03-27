@@ -1,0 +1,57 @@
+uuid: 31b2ac3d-2d5f-46b2-b0ad-bc49882e3651
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.promoter.field_promoter_
+    - field.field.taxonomy_term.promoter.field_promoter_logo
+    - field.field.taxonomy_term.promoter.field_promoter_name
+    - taxonomy.vocabulary.promoter
+  module:
+    - image
+    - link
+    - text
+id: taxonomy_term.promoter.default
+targetEntityType: taxonomy_term
+bundle: promoter
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_promoter_:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_promoter_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_promoter_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

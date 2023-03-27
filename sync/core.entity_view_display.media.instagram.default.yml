@@ -1,0 +1,30 @@
+uuid: f708763d-a0db-4325-87c8-8194bed59ad8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.instagram.field_caption
+    - field.field.media.instagram.field_media_instagram
+    - media.type.instagram
+  module:
+    - media_entity_instagram
+id: media.instagram.default
+targetEntityType: media
+bundle: instagram
+mode: default
+content:
+  field_media_instagram:
+    type: instagram_embed
+    label: visually_hidden
+    settings:
+      max_width: 0
+      hidecaption: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_caption: true
+  name: true
+  thumbnail: true
+  uid: true

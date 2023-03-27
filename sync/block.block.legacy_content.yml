@@ -1,0 +1,22 @@
+uuid: 2e4fcf1e-9f59-430c-aa23-1d4a4bc18d3d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - legacy
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: legacy_content
+theme: legacy
+region: content
+weight: -11
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

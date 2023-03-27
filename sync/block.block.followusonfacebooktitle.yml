@@ -1,0 +1,25 @@
+uuid: a1d2d8f8-6127-4dda-b1ae-6f584a61cdc4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:32f3a320-5240-4f11-84dd-896ebc22d1e6'
+  module:
+    - block_content
+  theme:
+    - legacy
+id: followusonfacebooktitle
+theme: legacy
+region: facebook_group
+weight: -13
+provider: null
+plugin: 'block_content:32f3a320-5240-4f11-84dd-896ebc22d1e6'
+settings:
+  id: 'block_content:32f3a320-5240-4f11-84dd-896ebc22d1e6'
+  label: 'Follow us on Facebook title'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,6 @@
+uuid: 6edd8913-7438-42a6-89fe-5255a8b67f01
+langcode: en
+status: true
+dependencies: {  }
+id: instagram_group
+label: 'Instagram group'

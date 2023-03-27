@@ -1,0 +1,28 @@
+uuid: 6da267c5-502d-478b-9494-e68598a13643
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.news_group
+  module:
+    - blockgroup
+    - system
+  theme:
+    - legacy
+id: newsgroup
+theme: legacy
+region: content
+weight: -10
+provider: null
+plugin: 'block_group:news_group'
+settings:
+  id: 'block_group:news_group'
+  label: 'News group'
+  label_display: '0'
+  provider: blockgroup
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

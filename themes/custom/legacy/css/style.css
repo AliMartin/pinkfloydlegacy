@@ -1,0 +1,326 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+
+body {
+  margin-top: 0;
+  background-color: #1e1e1e;
+  color: #efefef;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.mm-page,
+.mm-wrapper_background body {
+  background-color: #1e1e1e;
+  background-image: url('/themes/custom/legacy/images/wallpaper-01.jpg');
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Cinzel', sans-serif;
+  font-weight: 400;
+}
+
+nav.tabs,
+/* .messages__wrapper */ {
+  margin-top: 60px;
+}
+
+/*
+.main-container > row > div[role=heading] {
+  display: none;
+}
+*/
+
+
+
+/*
+ * Views
+ */
+ 
+.path-news h1.page-header,
+.path-shows h1.page-header {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+  border-bottom: none;
+}
+
+.view-news .view-content,
+.view-shows .view-content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.view-news .views-row {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3e3e3e;
+  min-height: 222px;
+}
+
+.view-shows {
+  text-align: center;
+}
+
+.view-shows .views-row {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3e3e3e;
+}
+
+.view-news .views-row:last-of-type,
+.view-shows .views-row:last-of-type {
+  border-bottom: none;
+}
+
+.view-news .views-field-field-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.view-news .views-field-field-image img {
+  width: 200px;
+  height: auto;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+  outline: none;
+  border: 1px solid #666;
+}
+
+.view-news .views-field-nothing {
+  overflow: auto;
+}
+
+.view-news .views-field-nothing .section {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.view-news .views-field-nothing .created {
+  font-family: 'Cinzel', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+
+.view-news .views-field-nothing .title {
+  margin-bottom: 15px;
+}
+
+.main-container .view-shows .views-field-title {
+  margin-bottom: 10px;
+}
+
+.main-container .view-shows .views-field-view-node a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-container .view-news .views-field-nothing .title a,
+.main-container .view-news .views-field-nothing .title a:visited,
+.main-container .view-shows .views-field-title a,
+.main-container .view-shows .views-field-title a:visited {
+  font-family: 'Cinzel', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-container .view-news .views-field-nothing .title a:hover,
+.main-container .view-news .views-field-nothing .title a:focus,
+.main-container .view-news .views-field-nothing .title a:active,
+.main-container .view-shows .views-field-title a:hover,
+.main-container .view-shows .views-field-title a:focus,
+.main-container .view-shows .views-field-title a:active {
+  color: #e5007d;
+  text-decoration: none;
+}
+
+.main-container .view-shows .views-field-field-date,
+.path-frontpage .view-shows .show-date {
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.path-frontpage .view-shows .show-date {
+  margin-bottom: 5px;
+}
+
+.view-news .views-field-nothing .teaser {
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .view-news .view-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main-container .view-news {
+    text-align: center;
+  }
+  .view-news .views-field-field-image {
+    float: inherit;
+    margin-right: 0;
+  }
+  .view-news .views-field-field-image img,
+  .view-news .more a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+/*
+ * No shows message
+ */
+
+
+.follow-social-link-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.follow-social-block .follow-social-title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.follow-social-block .follow-social-link {
+  display: inline-flex;
+  font-size: 48px;
+  line-height: 48px;
+  margin: 0 15px 10px 15px;
+}
+
+.follow-social-block .follow-social-link a,
+.follow-social-block .follow-social-link a:visited {
+  color: #fff;
+}
+
+.follow-social-block .follow-social-link a:focus,
+.follow-social-block .follow-social-link a:hover,
+.follow-social-block .follow-social-link a:active {
+  color: #e5007d;
+}
+
+
+
+.select-wrapper:after {
+  color: #e5007d;
+  margin-top: -0.4em;
+  padding-right: 1em;
+}
+
+
+
+/* Band biography page */
+
+.path-band .mm-page,
+.path-band .mm-wrapper_background body {
+  background-image: url('/themes/custom/legacy/images/seed/legacy-05-x.jpg');
+}
+
+.path-band h1.page-header {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+  border-bottom: none;
+}
+
+.view-id-band_biographies {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.path-band .region-content > .views-element-container > .view-id-band_biographies {
+  padding-bottom: 90px;
+}
+
+.view-id-band_biographies .attachment > div {
+  display: inline-flex;
+  margin: 0 10px 30px 10px;
+}
+
+.view-id-band_biographies .views-field-title,
+.view-id-band_biographies .biog-title {
+  max-width: 160px;
+  height: 50px;
+  text-align: center;
+  font-family: 'Cinzel', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.view-id-band_biographies .views-field-nothing a,
+.view-id-band_biographies .views-field-nothing a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.view-id-band_biographies .views-field-nothing a:focus,
+.view-id-band_biographies .views-field-nothing a:hover,
+.view-id-band_biographies .views-field-nothing a:active {
+  color: #e5007d;
+  text-decoration: none;
+}
+
+.view-id-band_biographies img {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  border: 2px solid #fff;
+}
+
+.view-id-band_biographies a:hover img {
+  border: 2px solid #e5007d;
+}
+
+
+
+/* Captcha */
+
+.g-recaptcha > div {
+	margin: 0 auto;
+}

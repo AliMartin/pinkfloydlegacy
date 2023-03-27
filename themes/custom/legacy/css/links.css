@@ -1,0 +1,135 @@
+/*
+ * Links
+ */
+
+.main-container a,
+.main-container a:visited {
+  color: #e5007d;
+  text-decoration: none;
+  outline: none;
+}
+
+.main-container a:hover,
+.main-container a:focus,
+.main-container a:active {
+  color: #e5007d;
+  text-decoration: underline;
+  outline: none;
+}
+
+
+
+/*
+ * Transparent buttons
+ */
+
+.view-news .more a,
+.view-news .more a:visited,
+.views-field-view-node a,
+.views-field-view-node a:visited,
+.field--name-field-link a,
+.field--name-field-link a:visited,
+.form-actions .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  color: #e5007d;
+  border: 1px solid #e5007d;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: transparent;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.view-news .more a:hover,
+.view-news .more a:focus,
+.view-news .more a:active,
+.views-field-view-node a:hover,
+.views-field-view-node a:focus,
+.views-field-view-node a:active,
+.field--name-field-link a:hover,
+.field--name-field-link a:focus,
+.field--name-field-link a:active,
+.form-actions .btn:hover {
+  color: #fff;
+  border: 1px solid #e5007d;
+  background-color: #e5007d;
+  text-decoration: none;
+  outline: none;
+}
+
+
+
+/*
+ * Solid buttons
+ */
+
+.path-frontpage .block-blockgroup .btn,
+.path-frontpage .block-blockgroup .btn:visited,
+.path-frontpage .view-news .more a,
+.path-frontpage .view-news .more a:visited,
+.path-frontpage .view-shows .views-field-view-node a,
+.path-frontpage .view-shows .views-field-view-node a:visited,
+.path-frontpage .more-link a,
+.path-frontpage .more-link a:visited,
+.page-node-type-show .field--name-field-link a,
+.page-node-type-show .field--name-field-link a:visited {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  color: #fff;
+  border: 1px solid #e5007d;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: #e5007d;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.path-frontpage .block-blockgroup .btn:hover,
+.path-frontpage .block-blockgroup .btn:focus,
+.path-frontpage .block-blockgroup .btn:active,
+.path-frontpage .view-news .more a:hover,
+.path-frontpage .view-news .more a:focus,
+.path-frontpage .view-news .more a:active,
+.path-frontpage .view-shows .views-field-view-node a:hover,
+.path-frontpage .view-shows .views-field-view-node a:focus,
+.path-frontpage .view-shows .views-field-view-node a:active,
+.path-frontpage .more-link a:hover,
+.path-frontpage .more-link a:focus,
+.path-frontpage .more-link a:active,
+.page-node-type-show .field--name-field-link a:hover,
+.page-node-type-show .field--name-field-link a:focus,
+.page-node-type-show .field--name-field-link a:active {
+  color: #fff;
+  border: 1px solid #ad0cf2;
+  background-color: #ad0cf2;
+  text-decoration: none;
+  outline: none;
+}
+
+.more-link,
+.page-node-type-show .field--name-field-link {
+  text-align: center;
+}
+
+#edit-actions button {
+  width: inherit;
+  display: block;
+  text-align: center;
+}
+
+.path-frontpage #block-followusoninstagram .btn {
+  margin-top: -10px;
+}

@@ -1,0 +1,25 @@
+uuid: 7d5aeb85-6bb7-49d2-80ab-679656d65c7e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:370818b8-bdbe-4ece-93a1-55fa900dde4f'
+  module:
+    - block_content
+  theme:
+    - legacy
+id: followusontwittercta
+theme: legacy
+region: twitter_group
+weight: -10
+provider: null
+plugin: 'block_content:370818b8-bdbe-4ece-93a1-55fa900dde4f'
+settings:
+  id: 'block_content:370818b8-bdbe-4ece-93a1-55fa900dde4f'
+  label: 'Follow us on Twitter CTA'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

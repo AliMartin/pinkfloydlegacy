@@ -1,0 +1,33 @@
+uuid: c9000766-d2a0-4e98-bba3-ec4c7c196c8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.promoter_website
+    - field.field.taxonomy_term.promoter.field_promoter_
+    - field.field.taxonomy_term.promoter.field_promoter_logo
+    - field.field.taxonomy_term.promoter.field_promoter_name
+    - taxonomy.vocabulary.promoter
+  module:
+    - link
+id: taxonomy_term.promoter.promoter_website
+targetEntityType: taxonomy_term
+bundle: promoter
+mode: promoter_website
+content:
+  field_promoter_:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  field_promoter_logo: true
+  field_promoter_name: true

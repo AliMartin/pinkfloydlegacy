@@ -1,0 +1,23 @@
+uuid: 6ead494d-56ea-4e55-9829-08e30855e4ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.show
+  module:
+    - node
+    - system
+    - toolbar
+id: promoter
+label: Promoter
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create show content'
+  - 'delete any show content'
+  - 'delete own show content'
+  - 'edit any show content'
+  - 'edit own show content'
+  - 'view the administration theme'

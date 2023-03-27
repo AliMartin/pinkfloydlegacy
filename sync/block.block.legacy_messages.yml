@@ -1,0 +1,22 @@
+uuid: d62d150b-f616-4eb1-b7c0-078964d8a8cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - legacy
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: legacy_messages
+theme: legacy
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

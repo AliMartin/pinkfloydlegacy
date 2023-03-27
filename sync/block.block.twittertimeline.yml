@@ -1,0 +1,46 @@
+uuid: 13dbd73b-96b1-4b41-b51e-635db6188055
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - twitter_embed
+  theme:
+    - legacy
+third_party_settings:
+  block_class:
+    classes: container
+id: twittertimeline
+theme: legacy
+region: twitter_group
+weight: -11
+provider: null
+plugin: twitter_embed_timeline
+settings:
+  id: twitter_embed_timeline
+  label: 'Twitter Timeline'
+  label_display: '0'
+  provider: twitter_embed
+  username: pinkfloydlegacy
+  type: profile
+  type_value: ''
+  display_style: timeline
+  theme: dark
+  chrome:
+    noheader: noheader
+    nofooter: nofooter
+    noborders: noborders
+    transparent: transparent
+    noscrollbar: 0
+  width: '800'
+  height: '600'
+  link_color: '#e5007e'
+  border_color: '#000000'
+  tweet_limit: '0'
+  show_replies: 0
+  aria_polite: polite
+  language: ''
+  hide_username: false
+  hide_followers_count: false
+  size: null
+visibility: {  }

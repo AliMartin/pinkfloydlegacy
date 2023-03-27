@@ -1,0 +1,22 @@
+uuid: a2c07d50-db70-423f-b0cd-f71c1c96e079
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - legacy
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: legacy_help
+theme: legacy
+region: header
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

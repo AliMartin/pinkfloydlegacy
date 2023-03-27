@@ -1,0 +1,197 @@
+uuid: 3692524f-7939-4990-bc67-f86e60dec082
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.show.body
+    - field.field.node.show.field_address
+    - field.field.node.show.field_date
+    - field.field.node.show.field_geofield
+    - field.field.node.show.field_link
+    - field.field.node.show.field_promoter
+    - node.type.show
+  module:
+    - address
+    - datetime
+    - ds
+    - leaflet
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      top:
+        - field_geofield
+        - node_title
+        - field_promoter
+      main:
+        - field_date
+        - field_address
+        - body
+        - field_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          wrapper: h1
+          class: ''
+id: node.show.default
+targetEntityType: node
+bundle: show
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: main
+  field_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: main
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: article
+    third_party_settings: {  }
+    weight: 3
+    region: main
+  field_geofield:
+    type: leaflet_formatter_default
+    label: hidden
+    settings:
+      multiple_map: false
+      leaflet_map: ~Legacy
+      height: 500
+      height_unit: px
+      hide_empty_map: false
+      gesture_handling: false
+      disable_wheel: true
+      reset_map:
+        control: false
+        position: topright
+      popup: false
+      popup_content: ''
+      map_position:
+        force: false
+        center:
+          lat: !!float 0
+          lon: !!float 0
+        zoom: 14
+        minZoom: 1
+        maxZoom: 18
+        zoomFiner: 0
+      icon:
+        iconType: marker
+        iconUrl: ''
+        shadowUrl: ''
+        className: ''
+        iconSize:
+          x: ''
+          'y': ''
+        iconAnchor:
+          x: ''
+          'y': ''
+        shadowSize:
+          x: ''
+          'y': ''
+        shadowAnchor:
+          x: ''
+          'y': ''
+        popupAnchor:
+          x: ''
+          'y': ''
+        html: '<div></div>'
+        html_class: leaflet-map-divicon
+        circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
+      leaflet_markercluster:
+        control: false
+        options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
+        include_path: false
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+      geocoder:
+        control: false
+        settings:
+          position: topright
+          input_size: 25
+          providers:
+            googlemaps:
+              weight: 0
+              checked: false
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          popup: false
+          options: ''
+      weight: ''
+      fullscreen_control: false
+    third_party_settings: {  }
+    weight: 0
+    region: top
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 6
+    region: main
+  field_promoter:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: promoter_logo
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: top
+hidden:
+  links: true
