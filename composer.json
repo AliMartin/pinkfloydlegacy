@@ -47,6 +47,7 @@
         "drupal/google_analytics": "^4.0",
         "drupal/gtranslate": "^1.15",
         "drupal/honeypot": "^2.1",
+        "drupal/httpswww": "^2.1",
         "drupal/leaflet": "^2.2",
         "drupal/leaflet_more_maps": "^2.1",
         "drupal/media_entity_instagram": "^3.0",
