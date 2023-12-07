@@ -13,12 +13,12 @@
   justify-content: center;
 }
 
-.gtranslate > a img {
+.gtranslate > a.glink img {
   display: none;
 }
 
-.gtranslate > a.gtflag,
-.gtranslate > a.gtflag:hover {
+.gtranslate > a.glink,
+.gtranslate > a.glink:hover {
   display: inline-flex;
   background-image: url('/themes/custom/legacy/images/flags.jpg');
   background-position: inherit;
@@ -33,34 +33,34 @@
   border: 1px solid #666;
 }
 
-.gtranslate > a.gtflag:nth-of-type(1) {background-position:    0px 0px !important;}
-.gtranslate > a.gtflag:nth-of-type(2) {background-position:  -40px 0px !important;}
-.gtranslate > a.gtflag:nth-of-type(3) {background-position:  -80px 0px !important;}
-.gtranslate > a.gtflag:nth-of-type(4) {background-position: -120px 0px !important;}
+.gtranslate > a.glink:nth-of-type(1) {background-position:    0px 0px !important;}
+.gtranslate > a.glink:nth-of-type(2) {background-position:  -40px 0px !important;}
+.gtranslate > a.glink:nth-of-type(3) {background-position:  -80px 0px !important;}
+.gtranslate > a.glink:nth-of-type(4) {background-position: -120px 0px !important;}
 
-.gtranslate > a.gtflag:hover:nth-of-type(1) {background-position:    0px -40px !important;}
-.gtranslate > a.gtflag:hover:nth-of-type(2) {background-position:  -40px -40px !important;}
-.gtranslate > a.gtflag:hover:nth-of-type(3) {background-position:  -80px -40px !important;}
-.gtranslate > a.gtflag:hover:nth-of-type(4) {background-position: -120px -40px !important;}
+.gtranslate > a.glink:hover:nth-of-type(1) {background-position:    0px -40px !important;}
+.gtranslate > a.glink:hover:nth-of-type(2) {background-position:  -40px -40px !important;}
+.gtranslate > a.glink:hover:nth-of-type(3) {background-position:  -80px -40px !important;}
+.gtranslate > a.glink:hover:nth-of-type(4) {background-position: -120px -40px !important;}
 
 @media screen and (max-width: 599px) {
 
-  .gtranslate > a.gtflag,
-  .gtranslate > a.gtflag:hover {
+  .gtranslate > a.glink,
+  .gtranslate > a.glink:hover {
     background-size: 120px 60px;
     width: 32px;
     height: 32px;
   }
   
-  .gtranslate > a.gtflag:nth-of-type(1) {background-position:   0px 0px !important;}
-  .gtranslate > a.gtflag:nth-of-type(2) {background-position: -30px 0px !important;}
-  .gtranslate > a.gtflag:nth-of-type(3) {background-position: -60px 0px !important;}
-  .gtranslate > a.gtflag:nth-of-type(4) {background-position: -90px 0px !important;}
+  .gtranslate > a.glink:nth-of-type(1) {background-position:   0px 0px !important;}
+  .gtranslate > a.glink:nth-of-type(2) {background-position: -30px 0px !important;}
+  .gtranslate > a.glink:nth-of-type(3) {background-position: -60px 0px !important;}
+  .gtranslate > a.glink:nth-of-type(4) {background-position: -90px 0px !important;}
   
-  .gtranslate > a.gtflag:hover:nth-of-type(1) {background-position:   0px -30px !important;}
-  .gtranslate > a.gtflag:hover:nth-of-type(2) {background-position: -30px -30px !important;}
-  .gtranslate > a.gtflag:hover:nth-of-type(3) {background-position: -60px -30px !important;}
-  .gtranslate > a.gtflag:hover:nth-of-type(4) {background-position: -90px -30px !important;}
+  .gtranslate > a.glink:hover:nth-of-type(1) {background-position:   0px -30px !important;}
+  .gtranslate > a.glink:hover:nth-of-type(2) {background-position: -30px -30px !important;}
+  .gtranslate > a.glink:hover:nth-of-type(3) {background-position: -60px -30px !important;}
+  .gtranslate > a.glink:hover:nth-of-type(4) {background-position: -90px -30px !important;}
 }
 
 
