@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:a73e8943-0c90-409f-85a6-37ad1ab4613c'
   module:
     - block_content
+    - context
   theme:
     - legacy
 id: sociallinks
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    context_mapping: {  }
+    view_inclusion: {  }

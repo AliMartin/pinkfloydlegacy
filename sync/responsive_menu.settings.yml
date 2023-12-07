@@ -8,7 +8,7 @@ horizontal_breakpoint: wide
 horizontal_media_query: '(min-width: 960px)'
 include_css: true
 off_canvas_position: right
-off_canvas_theme: theme-dark
+off_canvas_theme: theme-black
 pagedim: pagedim
 horizontal_superfish: true
 horizontal_superfish_delay: 300

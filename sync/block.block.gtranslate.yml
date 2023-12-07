@@ -3,9 +3,13 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_class
     - gtranslate
   theme:
     - legacy
+third_party_settings:
+  block_class:
+    replaced_id: gtranslate
 id: gtranslate
 theme: legacy
 region: header_top_middle
