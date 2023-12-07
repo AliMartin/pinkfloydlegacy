@@ -1,6 +1,6 @@
 uuid: 59520ac6-d541-4a52-b210-0ba9074258a7
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - blockgroup.block_group_content.instagram_group

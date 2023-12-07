@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.show
   module:
+    - file
     - node
     - system
     - toolbar
@@ -17,6 +18,7 @@ permissions:
   - 'access toolbar'
   - 'create show content'
   - 'delete any show content'
+  - 'delete own files'
   - 'delete own show content'
   - 'edit any show content'
   - 'edit own show content'

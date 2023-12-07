@@ -1,6 +1,6 @@
 uuid: df863c1b-ac85-434f-85e9-14ebe0fcf047
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - blockgroup.block_group_content.twitter_group
