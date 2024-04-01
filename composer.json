@@ -62,7 +62,7 @@
         "drupal/views_bootstrap": "^4.4",
         "drupal/webform": "^6.1",
         "drupal/youtube": "^2.0",
-        "drush/drush": "^11.6",
+        "drush/drush": "^12",
         "npm-asset/blazy": "^1.8",
         "npm-asset/hammerjs": "^2.0",
         "oomphinc/composer-installers-extender": "^2.0"
