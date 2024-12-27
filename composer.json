@@ -46,7 +46,6 @@
         "drupal/geocoder": "^4.13",
         "drupal/geofield": "^1.52",
         "drupal/google_analytics": "^4.0",
-        "drupal/gtranslate": "^3.0",
         "drupal/honeypot": "^2.1",
         "drupal/httpswww": "^2.1",
         "drupal/leaflet": "^10.2",
@@ -89,9 +88,6 @@
     },
     "extra": {
         "patches": {
-            "drupal/gtranslate": {
-                "Issue #3375925": "https://www.drupal.org/files/issues/2023-08-31/gtranslate-3375925-update-default-config-11.diff"
-            }
         },
         "installer-types": [
             "bower-asset",
