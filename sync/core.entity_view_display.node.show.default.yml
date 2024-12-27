@@ -106,22 +106,38 @@ content:
     settings:
       multiple_map: false
       leaflet_map: ~Legacy
-      height: 500
-      height_unit: px
+      height: 50
+      height_unit: vh
       hide_empty_map: false
+      disable_wheel: false
       gesture_handling: false
-      disable_wheel: true
+      fitbounds_options: '{"padding":[0,0]}'
       reset_map:
         control: false
-        position: topright
+        options: '{"position":"topleft","title":"Reset View"}'
+      map_scale:
+        control: false
+        options: '{"position":"bottomright","maxWidth":100,"metric":true,"imperial":false,"updateWhenIdle":false}'
+      locate:
+        control: false
+        options: '{"position":"topright","setView":"untilPanOrZoom","returnToPrevBounds":true,"keepCurrentZoomLevel":true,"strings":{"title":"Locate my position"}}'
+        automatic: false
+      leaflet_tooltip:
+        value: ''
+        options: '{"permanent":false,"direction":"center"}'
       popup: false
       popup_content: ''
+      leaflet_popup:
+        control: '0'
+        content: ''
+        options: '{"maxWidth":"300","minWidth":"50","autoPan":true}'
       map_position:
         force: false
         center:
           lat: 0.0
           lon: 0.0
-        zoom: 14
+        zoomControlPosition: topleft
+        zoom: 10
         minZoom: 1
         maxZoom: 18
         zoomFiner: 0
@@ -151,15 +167,24 @@ content:
       leaflet_markercluster:
         control: false
         options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
+        excluded: ''
         include_path: false
+      fullscreen:
+        control: false
+        options: '{"position":"topleft","pseudoFullscreen":false}'
       path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+      feature_properties:
+        values: ''
       geocoder:
         control: false
         settings:
+          autocomplete:
+            placeholder: 'Search Address'
+            title: 'Search an Address on the Map'
           position: topright
-          input_size: 25
+          input_size: 20
           providers:
-            googlemaps:
+            nominatim:
               weight: 0
               checked: false
           min_terms: 4
@@ -167,8 +192,9 @@ content:
           zoom: 16
           popup: false
           options: ''
-      weight: ''
-      fullscreen_control: false
+      map_lazy_load:
+        lazy_load: false
+      weight: 0
     third_party_settings: {  }
     weight: 0
     region: top

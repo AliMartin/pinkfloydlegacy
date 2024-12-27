@@ -6,5 +6,6 @@ dependencies:
     - taxonomy
 id: taxonomy_term.promoter_logo
 label: 'Promoter logo'
+description: ''
 targetEntityType: taxonomy_term
 cache: true

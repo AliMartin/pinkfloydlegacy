@@ -11,7 +11,7 @@ third_party_settings:
 name: Show
 type: show
 description: 'Add a <em>show</em> to the website.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

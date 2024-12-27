@@ -15,9 +15,9 @@ third_party_settings:
     field: field_address
     skip_not_empty_value: false
     disabled: true
-    hidden: false
+    hidden: true
     providers:
-      - googlemaps
+      - nominatim
     dumper: wkt
     delta_handling: default
     failure:
@@ -34,6 +34,5 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  backend: geofield_backend_default
+settings: {  }
 field_type: geofield

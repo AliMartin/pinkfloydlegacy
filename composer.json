@@ -63,6 +63,7 @@
         "drupal/webform": "^6.1",
         "drupal/youtube": "^2.0",
         "drush/drush": "^12",
+        "geocoder-php/nominatim-provider": "^5.7",
         "npm-asset/blazy": "^1.8",
         "npm-asset/hammerjs": "^2.0",
         "oomphinc/composer-installers-extender": "^2.0"
@@ -76,13 +77,14 @@
         "sort-packages": true,
         "allow-plugins": {
             "composer/installers": true,
-            "drupal/console-extend-plugin": true,
             "cweagans/composer-patches": true,
+            "drupal/console-extend-plugin": true,
             "drupal/core-composer-scaffold": true,
-            "zaporylie/composer-drupal-optimizations": true,
             "drupal/core-project-message": true,
             "drupal/core-vendor-hardening": true,
-            "oomphinc/composer-installers-extender": true
+            "oomphinc/composer-installers-extender": true,
+            "php-http/discovery": true,
+            "zaporylie/composer-drupal-optimizations": true
         }
     },
     "extra": {
