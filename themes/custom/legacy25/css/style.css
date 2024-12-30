@@ -13154,12 +13154,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   letter-spacing: 5px;
   margin-bottom: 5px;
 }
+#block-legacy25-views-block-shows-block-3 .show-title {
+  margin-bottom: 5px;
+}
 #block-legacy25-views-block-shows-block-3 .show-title a {
   font-family: "Cinzel", sans-serif;
   font-size: xx-large;
   line-height: 1;
   color: #ffffff;
-  margin-bottom: 5px;
 }
 #block-legacy25-views-block-shows-block-3 .show-title a:hover, #block-legacy25-views-block-shows-block-3 .show-title a:focus {
   color: #e5007d;
@@ -13181,6 +13183,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   #block-legacy25-views-block-shows-block-3 .views-field-nothing {
     display: block;
     margin-bottom: 15px;
+  }
+  #block-legacy25-views-block-shows-block-3 .show-date {
+    font-size: medium;
+  }
+  #block-legacy25-views-block-shows-block-3 .show-title a {
+    font-size: x-large;
   }
   #block-legacy25-views-block-shows-block-3 .views-field-view-node {
     display: inline-block;
@@ -13242,6 +13250,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   margin-bottom: 15px;
 }
 
+@media only screen and (max-width: 767px) {
+  .view-shows.view-display-id-insert_view .show-date {
+    font-size: medium;
+  }
+  .view-shows.view-display-id-insert_view .show-title a {
+    font-size: x-large;
+  }
+}
 #block-legacy25-views-block-news-block-1 h1, #block-legacy25-views-block-news-block-1 .h1, #block-legacy25-views-block-news-block-1 h2, #block-legacy25-views-block-news-block-1 .h2,
 .view-news.view-display-id-page_1 h1,
 .view-news.view-display-id-page_1 .h1,
@@ -13333,6 +13349,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   #block-legacy25-views-block-news-block-1 .views-field-field-image,
 .view-news.view-display-id-page_1 .views-field-field-image {
     float: inherit;
+    margin-right: 0;
   }
 }
 .view-band-biographies.view-display-id-insert_view .view-content {
