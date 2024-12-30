@@ -12,8 +12,15 @@ dependencies:
     - field.field.node.show.field_promoter
     - node.type.show
   module:
+    - field_layout
+    - layout_discovery
+    - manage_display
     - text
-    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.show.teaser
 targetEntityType: node
 bundle: show
@@ -32,9 +39,20 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
 hidden:
+  created: true
   field_address: true
   field_date: true
   field_geofield: true
   field_link: true
   field_promoter: true
+  uid: true

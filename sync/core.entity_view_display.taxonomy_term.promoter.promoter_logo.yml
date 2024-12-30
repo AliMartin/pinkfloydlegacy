@@ -10,8 +10,16 @@ dependencies:
     - image.style.promoter_logo
     - taxonomy.vocabulary.promoter
   module:
+    - field_layout
     - image
+    - layout_discovery
     - link
+    - manage_display
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: taxonomy_term.promoter.promoter_logo
 targetEntityType: taxonomy_term
 bundle: promoter
@@ -47,6 +55,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  name:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
     region: content
 hidden:
   description: true

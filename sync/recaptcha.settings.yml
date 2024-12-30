@@ -5,8 +5,8 @@ secret_key: 6Ldi5BIaAAAAAGKzmSOSADISglW6ViDEqbovPhWf
 verify_hostname: false
 use_globally: true
 widget:
-  theme: light
+  theme: dark
   type: image
   size: ''
-  tabindex: 0
   noscript: false
+  tabindex: 0

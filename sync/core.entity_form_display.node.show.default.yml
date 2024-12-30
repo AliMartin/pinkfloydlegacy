@@ -13,10 +13,17 @@ dependencies:
   module:
     - address
     - datetime
+    - field_layout
+    - layout_discovery
     - leaflet
     - link
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.show.default
 targetEntityType: node
 bundle: show

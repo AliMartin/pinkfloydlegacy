@@ -1,11 +1,12 @@
 uuid: e279bb52-7fa7-4d00-af87-029395907101
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - field.storage.node.field_geofield
     - node.type.show
   module:
+    - datetime
     - leaflet
     - leaflet_views
     - node
@@ -127,21 +128,35 @@ display:
           settings:
             multiple_map: false
             leaflet_map: ~Legacy
-            height: 500
-            height_unit: px
+            height: 80
+            height_unit: vh
             hide_empty_map: false
-            gesture_handling: false
             disable_wheel: false
+            gesture_handling: false
+            fitbounds_options: '{"padding":[0,0]}'
             reset_map:
               control: false
-              position: topright
-            popup: false
-            popup_content: ''
+              options: '{"position":"topleft","title":"Reset View"}'
+            map_scale:
+              control: false
+              options: '{"position":"bottomright","maxWidth":100,"metric":true,"imperial":false,"updateWhenIdle":false}'
+            locate:
+              control: false
+              options: '{"position":"topright","setView":"untilPanOrZoom","returnToPrevBounds":true,"keepCurrentZoomLevel":true,"strings":{"title":"Locate my position"}}'
+              automatic: false
+            leaflet_tooltip:
+              value: ''
+              options: '{"permanent":false,"direction":"center"}'
+            leaflet_popup:
+              control: '1'
+              content: ''
+              options: '{"maxWidth":"300","minWidth":"50","autoPan":true}'
             map_position:
               force: false
               center:
                 lat: 0.0
                 lon: 0.0
+              zoomControlPosition: topleft
               zoom: 12
               minZoom: 1
               maxZoom: 18
@@ -169,14 +184,22 @@ display:
               html: '<div></div>'
               html_class: leaflet-map-divicon
               circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
+            fullscreen:
+              control: true
+              options: '{"position":"bottomleft","pseudoFullscreen":false}'
             path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+            feature_properties:
+              values: ''
             geocoder:
               control: false
               settings:
+                autocomplete:
+                  placeholder: 'Search Address'
+                  title: 'Search an Address on the Map'
                 position: topright
                 input_size: 25
                 providers:
-                  googlemaps:
+                  nominatim:
                     weight: 0
                     checked: false
                 min_terms: 4
@@ -184,8 +207,8 @@ display:
                 zoom: 16
                 popup: false
                 options: ''
-            fullscreen_control: false
-            weight: ''
+            map_lazy_load:
+              lazy_load: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -249,7 +272,7 @@ display:
           entity_field: status
           plugin_id: boolean
           operator: '='
-          value: '0'
+          value: '1'
           group: 1
           exposed: false
           expose:
@@ -290,6 +313,51 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: between
+          value:
+            min: '-2 days'
+            max: '+365 days'
+            value: ''
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: leaflet_map
         options:
@@ -297,14 +365,13 @@ display:
           data_source: field_geofield
           entity_source: __base_table
           name_field: ''
-          description_field: title
           view_mode: full
           leaflet_map: ~Legacy
           height: '500'
           height_unit: px
           hide_empty_map: false
-          gesture_handling: false
           disable_wheel: false
+          gesture_handling: false
           reset_map:
             control: false
             position: topright
@@ -356,6 +423,7 @@ display:
               zoom: 16
               popup: false
               options: ''
+          description_field: title
           fullscreen_control: true
       row:
         type: fields

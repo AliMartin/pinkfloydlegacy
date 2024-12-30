@@ -7,7 +7,14 @@ dependencies:
     - field.field.block_content.youtube.body
     - field.field.block_content.youtube.field_youtube
   module:
+    - field_layout
+    - layout_discovery
     - youtube
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: block_content.youtube.default
 targetEntityType: block_content
 bundle: youtube

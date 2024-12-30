@@ -13,65 +13,17 @@ dependencies:
   module:
     - address
     - datetime
-    - ds
+    - field_layout
+    - layout_discovery
     - leaflet
     - link
+    - manage_display
     - text
-    - user
 third_party_settings:
-  ds:
-    layout:
-      id: bs_1col_stacked
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-        layout:
-          wrapper: div
-          classes:
-            row: row
-          add_layout_class: 1
-          attributes: ''
-        regions:
-          top:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
-          main:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
-          bottom:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
-    regions:
-      top:
-        - field_geofield
-        - node_title
-        - field_promoter
-      main:
-        - field_date
-        - field_address
-        - body
-        - field_link
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 1
-        label: hidden
-        formatter: default
-        settings:
-          link: false
-          wrapper: h1
-          class: ''
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.show.default
 targetEntityType: node
 bundle: show
@@ -82,15 +34,15 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 5
-    region: main
+    weight: 6
+    region: content
   field_address:
     type: address_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 4
-    region: main
+    region: content
   field_date:
     type: datetime_default
     label: hidden
@@ -99,17 +51,17 @@ content:
       format_type: article
     third_party_settings: {  }
     weight: 3
-    region: main
+    region: content
   field_geofield:
     type: leaflet_formatter_default
     label: hidden
     settings:
       multiple_map: false
       leaflet_map: ~Legacy
-      height: 50
+      height: 60
       height_unit: vh
       hide_empty_map: false
-      disable_wheel: false
+      disable_wheel: true
       gesture_handling: false
       fitbounds_options: '{"padding":[0,0]}'
       reset_map:
@@ -121,7 +73,7 @@ content:
       locate:
         control: false
         options: '{"position":"topright","setView":"untilPanOrZoom","returnToPrevBounds":true,"keepCurrentZoomLevel":true,"strings":{"title":"Locate my position"}}'
-        automatic: false
+        automatic: true
       leaflet_tooltip:
         value: ''
         options: '{"permanent":false,"direction":"center"}'
@@ -137,7 +89,7 @@ content:
           lat: 0.0
           lon: 0.0
         zoomControlPosition: topleft
-        zoom: 10
+        zoom: 6
         minZoom: 1
         maxZoom: 18
         zoomFiner: 0
@@ -193,11 +145,11 @@ content:
           popup: false
           options: ''
       map_lazy_load:
-        lazy_load: false
+        lazy_load: true
       weight: 0
     third_party_settings: {  }
     weight: 0
-    region: top
+    region: content
   field_link:
     type: link
     label: hidden
@@ -205,19 +157,29 @@ content:
       trim_length: 80
       url_only: false
       url_plain: false
-      rel: nofollow
-      target: _blank
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 6
-    region: main
+    weight: 5
+    region: content
   field_promoter:
-    type: entity_reference_entity_view
+    type: entity_reference_label
     label: hidden
     settings:
-      view_mode: promoter_logo
       link: false
     third_party_settings: {  }
+    weight: 1
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: false
+      tag: h1
+    third_party_settings: {  }
     weight: 2
-    region: top
+    region: content
 hidden:
+  created: true
   links: true
+  uid: true

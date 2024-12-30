@@ -8,8 +8,15 @@ dependencies:
     - field.field.node.video.field_video
     - node.type.video
   module:
+    - field_layout
+    - layout_discovery
+    - manage_display
     - text
-    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.video.teaser
 targetEntityType: node
 bundle: video
@@ -28,5 +35,16 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
 hidden:
+  created: true
   field_video: true
+  uid: true

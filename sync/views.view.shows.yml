@@ -429,7 +429,18 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: '<h1>Pink Floyd Legacy Shows</h1>'
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -919,15 +930,20 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_date'
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
+  insert_view:
+    id: insert_view
+    display_title: 'Insert view'
+    display_plugin: block
     position: 1
     display_options:
+      defaults:
+        header: false
+      display_description: ''
+      header: {  }
       display_extenders:
-        metatag_display_extender: {  }
-      path: shows
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:

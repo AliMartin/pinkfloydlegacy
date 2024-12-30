@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
-    - field.field.node.article.comment
     - field.field.node.article.field_attachments
     - field.field.node.article.field_image
     - field.field.node.article.field_section
@@ -13,72 +11,16 @@ dependencies:
     - field.field.node.article.field_teaser
     - node.type.article
   module:
-    - comment
-    - ds
+    - field_layout
     - file
+    - layout_discovery
+    - manage_display
     - text
-    - user
 third_party_settings:
-  ds:
-    layout:
-      id: bs_1col_stacked
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-        layout:
-          wrapper: div
-          classes:
-            row: row
-          add_layout_class: 1
-          attributes: ''
-        regions:
-          top:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
-          main:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
-          bottom:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
-    regions:
-      top:
-        - field_image
-        - node_title
-      main:
-        - field_section
-        - node_post_date
-        - field_teaser
-        - body
-        - field_video
-        - field_attachments
-        - comment
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 1
-        label: hidden
-        formatter: default
-        settings:
-          link: false
-          wrapper: h1
-          class: ''
-      node_post_date:
-        plugin_id: node_post_date
-        weight: 3
-        label: hidden
-        formatter: ds_post_date_article
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.default
@@ -91,49 +33,51 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 5
-    region: main
-  comment:
-    type: comment_default
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 8
-    region: main
+    weight: 4
+    region: content
   field_attachments:
     type: file_default
     label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 7
-    region: main
+    weight: 5
+    region: content
   field_image:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: default
+      view_mode: full
       link: false
     third_party_settings: {  }
     weight: 0
-    region: top
+    region: content
   field_section:
     type: entity_reference_label
     label: hidden
     settings:
       link: false
     third_party_settings: {  }
-    weight: 2
-    region: main
+    weight: 1
+    region: content
   field_teaser:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
-    region: main
+    weight: 3
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: false
+      tag: h1
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
+  created: true
   field_tags: true
   links: true
+  uid: true

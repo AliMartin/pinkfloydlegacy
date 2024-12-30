@@ -21,54 +21,53 @@ elements: |-
   step_1:
     '#type': webform_wizard_page
     '#title': 'Step 1'
-    nature_of_enquiry:
-      '#type': select
-      '#title': 'Nature of enquiry'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    name:
+      '#type': textfield
+      '#title': Name
       '#title_display': invisible
-      '#options':
-        band: 'General band enquiry'
-        megatone: 'Megatone Concert Agency'
-      '#empty_option': 'Nature of enquiry'
-      '#empty_value': nothing_selected
+      '#placeholder': 'What is your name?'
       '#required': true
-      '#required_error': 'What is the nature of your enquiry?'
+      '#format_items': comma
   step_2:
     '#type': webform_wizard_page
     '#title': 'Step 2'
-    name:
-      '#type': textfield
-      '#title': 'Your Name'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    email:
+      '#type': email
+      '#title': Email
       '#title_display': invisible
-      '#placeholder': 'Your name'
+      '#placeholder': 'What is your email address?'
       '#required': true
-      '#default_value': '[current-user:display-name]'
+      '#format_items': comma
   step_3:
     '#type': webform_wizard_page
     '#title': 'Step 3'
-    email:
-      '#type': email
-      '#title': 'Your Email'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    telephone:
+      '#type': textfield
+      '#title': Telephone
       '#title_display': invisible
-      '#placeholder': 'Your email'
-      '#required': true
-      '#default_value': '[current-user:mail]'
+      '#placeholder': "What's your telephone number?"
+      '#format_items': comma
   step_4:
     '#type': webform_wizard_page
     '#title': 'Step 4'
-    message:
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    details:
       '#type': textarea
-      '#title': Message
+      '#title': Details
       '#title_display': invisible
-      '#placeholder': 'Leave us a message!'
-      '#required': true
-      '#test': 'Please ignore this email.'
-    captcha:
-      '#type': captcha
-      '#captcha_type': recaptcha/reCAPTCHA
-    actions:
-      '#type': webform_actions
-      '#title': 'Submit button(s)'
-      '#submit__label': 'Send message'
+      '#placeholder': 'Finally, if you can, please tell us a bit about your enquiry.'
+      '#format_items': comma
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Send message'
 css: ''
 javascript: ''
 settings:
@@ -173,10 +172,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: inline
   confirmation_url: '<front>'
-  confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
+  confirmation_title: 'Thank you'
+  confirmation_message: '<p><strong>Thank you, someone from Pink Floyd Legacy will be in touch soon!</strong></p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -296,10 +295,7 @@ handlers:
     label: 'Email notification'
     notes: ''
     status: true
-    conditions:
-      enabled:
-        ':input[name="nature_of_enquiry"]':
-          value: band
+    conditions: {  }
     weight: 2
     settings:
       states:
@@ -317,48 +313,8 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: '* Band enquiry from Pink Floyd Legacy website *'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
-  email_notification_1:
-    id: email
-    handler_id: email_notification_1
-    label: 'Email notification'
-    notes: ''
-    status: true
-    conditions:
-      enabled:
-        ':input[name="nature_of_enquiry"]':
-          value: megatone
-    weight: 2
-    settings:
-      states:
-        - completed
-      to_mail: harmony76@mail.ru
-      to_options: {  }
-      bcc_mail: info@alimartin.com
-      bcc_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      from_mail: '[site:mail]'
-      from_options: {  }
-      from_name: '* Pink Floyd Legacy *'
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      subject: '* Megatone enquiry from Pink Floyd Legacy website *'
-      body: '[webform_submission:values:message:value]'
+      subject: '* Enquiry from Pink Floyd Legacy website *'
+      body: '<p>[webform_submission:values:message:value]</p>'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

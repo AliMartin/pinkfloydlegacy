@@ -5,11 +5,9 @@ dependencies:
   config:
     - filter.format.restricted_html
   module:
-    - comment
-    - contact
+    - background_image
     - filter
     - media
-    - search
     - system
 _core:
   default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
@@ -18,10 +16,7 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access site-wide contact form'
-  - 'post comments'
-  - 'search content'
   - 'use text format restricted_html'
+  - 'view background image'
   - 'view media'

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.comment
     - field.field.node.article.field_attachments
     - field.field.node.article.field_image
     - field.field.node.article.field_section
@@ -12,11 +11,17 @@ dependencies:
     - field.field.node.article.field_teaser
     - node.type.article
   module:
-    - comment
+    - field_layout
     - file
+    - layout_discovery
     - media_library
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: 6VUXB1jTUjK5zjkfMa2Kd2WW4sFUlgfBlfJSx01qLpU
 id: node.article.default
@@ -33,12 +38,6 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 8
-    region: content
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

@@ -7,48 +7,16 @@ dependencies:
     - field.field.node.video.field_video
     - node.type.video
   module:
-    - ds
+    - field_layout
+    - layout_discovery
+    - manage_display
     - text
-    - user
     - video
 third_party_settings:
-  ds:
-    layout:
-      id: bs_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-        layout:
-          wrapper: div
-          classes:
-            row: row
-          add_layout_class: 1
-          attributes: ''
-        regions:
-          main:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
-    regions:
-      main:
-        - field_video
-        - node_title
-        - body
-        - links
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 1
-        label: hidden
-        formatter: default
-        settings:
-          link: false
-          wrapper: h1
-          class: ''
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.video.default
 targetEntityType: node
 bundle: video
@@ -60,9 +28,9 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
-    region: main
+    region: content
   field_video:
-    type: video_player
+    type: video_player_list
     label: hidden
     settings:
       controls: true
@@ -74,10 +42,21 @@ content:
       preload: none
     third_party_settings: {  }
     weight: 0
-    region: main
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 3
-    region: main
-hidden: {  }
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  uid: true
