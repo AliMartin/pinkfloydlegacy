@@ -13398,7 +13398,8 @@ header nav.navbar {
   z-index: 99;
 }
 #block-legacy25-branding img {
-  height: 130px;
+  padding: 10px 0;
+  height: 110px;
 }
 
 .region.region-translate {

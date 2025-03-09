@@ -12407,7 +12407,8 @@ a > .ck-content code {
   z-index: 99;
 }
 .ck-content #block-legacy25-branding img {
-  height: 130px;
+  padding: 10px 0;
+  height: 110px;
 }
 .ck-content .region.region-translate {
   display: flex;
