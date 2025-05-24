@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.show.field_date
     - field.field.node.show.field_geofield
     - field.field.node.show.field_link
+    - field.field.node.show.field_metatags
     - field.field.node.show.field_promoter
     - node.type.show
   module:
@@ -17,6 +18,7 @@ dependencies:
     - layout_discovery
     - leaflet
     - link
+    - metatag
     - path
     - text
 third_party_settings:
@@ -111,13 +113,13 @@ content:
       geocoder:
         control: false
         settings:
+          popup: false
           position: topright
           input_size: 20
           providers: {  }
           min_terms: 4
           delay: 800
           zoom: 16
-          popup: false
           options: ''
       geometry_validation: false
       feature_properties:
@@ -130,6 +132,14 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_promoter:
     type: options_select

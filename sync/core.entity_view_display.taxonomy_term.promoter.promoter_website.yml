@@ -10,6 +10,7 @@ dependencies:
     - taxonomy.vocabulary.promoter
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - link
     - manage_display
@@ -18,6 +19,52 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          e1584ad3-74bf-4f91-bd38-cc73e6911d04:
+            uuid: e1584ad3-74bf-4f91-bd38-cc73e6911d04
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:promoter:name'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: title
+                label: hidden
+                settings:
+                  link_to_entity: true
+                  tag: h2
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          5cb73b5e-33a9-40bb-b211-20221fb66e8f:
+            uuid: 5cb73b5e-33a9-40bb-b211-20221fb66e8f
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:promoter:field_promoter_'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 id: taxonomy_term.promoter.promoter_website
 targetEntityType: taxonomy_term
 bundle: promoter

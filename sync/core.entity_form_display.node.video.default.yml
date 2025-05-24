@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.video.body
+    - field.field.node.video.field_metatags
     - field.field.node.video.field_video
     - node.type.video
   module:
     - field_layout
     - layout_discovery
+    - metatag
     - path
     - text
     - video
@@ -37,6 +39,14 @@ content:
     weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_video:
     type: video_upload

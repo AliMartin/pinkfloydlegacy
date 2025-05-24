@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.webform.body
     - field.field.node.webform.field_image
+    - field.field.node.webform.field_metatags
     - field.field.node.webform.webform
     - node.type.webform
   module:
     - field_layout
     - layout_discovery
     - media_library
+    - metatag
     - path
     - text
     - webform
@@ -48,6 +50,14 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   path:
     type: path

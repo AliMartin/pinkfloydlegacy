@@ -3,16 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.show.title
     - core.entity_view_mode.node.teaser
     - field.field.node.show.body
     - field.field.node.show.field_address
     - field.field.node.show.field_date
     - field.field.node.show.field_geofield
     - field.field.node.show.field_link
+    - field.field.node.show.field_metatags
     - field.field.node.show.field_promoter
     - node.type.show
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - manage_display
     - text
@@ -21,6 +24,58 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          07c06a2d-ea31-413e-b11c-95a717a8edad:
+            uuid: 07c06a2d-ea31-413e-b11c-95a717a8edad
+            region: content
+            configuration:
+              id: 'field_block:node:show:title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: title
+                label: hidden
+                settings:
+                  link_to_entity: true
+                  tag: h2
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a0a1523a-0382-44b5-b6d1-3d0ea498814d:
+            uuid: a0a1523a-0382-44b5-b6d1-3d0ea498814d
+            region: content
+            configuration:
+              id: 'extra_field_block:node:show:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          7ae2b84a-85f9-43b9-b096-ea4296295527:
+            uuid: 7ae2b84a-85f9-43b9-b096-ea4296295527
+            region: content
+            configuration:
+              id: 'field_block:node:show:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
 id: node.show.teaser
 targetEntityType: node
 bundle: show
@@ -54,5 +109,6 @@ hidden:
   field_date: true
   field_geofield: true
   field_link: true
+  field_metatags: true
   field_promoter: true
   uid: true
