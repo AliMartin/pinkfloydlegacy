@@ -2,6 +2,8 @@ uuid: e5b9ca31-a7c5-47b3-97cc-1b53112e20c1
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.video
   module:
     - node
 id: video
@@ -12,7 +14,6 @@ selection_criteria:
   add5d81c-7f6a-41ca-b52d-f0e75270d150:
     id: 'entity_bundle:node'
     negate: false
-    uuid: add5d81c-7f6a-41ca-b52d-f0e75270d150
     context_mapping:
       node: node
     bundles:

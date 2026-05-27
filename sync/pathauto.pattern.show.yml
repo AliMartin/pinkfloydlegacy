@@ -2,6 +2,8 @@ uuid: 61dc7e84-154f-438d-b784-5d132fa49876
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.show
   module:
     - node
 id: show
@@ -12,7 +14,6 @@ selection_criteria:
   9aee929e-3140-457f-8356-a2a52f6f8d12:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 9aee929e-3140-457f-8356-a2a52f6f8d12
     context_mapping:
       node: node
     bundles:

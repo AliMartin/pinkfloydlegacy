@@ -1,6 +1,6 @@
 uuid: 470a8935-812c-4dcf-9052-ca4cac88aae1
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.shows
